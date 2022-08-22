@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+main{
+    width:700px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.outer {
+    width: 300px;
+    height: 200px;
+    background-color: #f55353;
+}
+
+.inner {
+    width: 200px;
+    height: 100px;
+    background-color: #feb139;
+}
+
+.way-1 {
+    position: relative;
+}
+
+.way-1 > .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.way-2 {
+    position: relative;
+}
+.way-2 > .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.way-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.way-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.way-4 > .inner {
+    align-self: center;
+}
+
+.way-5 {
+    display: flex;
+}
+
+.way-5 > .inner {
+    margin: auto;
+}
+
+.way-6 {
+    display: grid;
+    justify-content: center;
+    align-items: center
+}
+
+.way-7 {
+    display: grid;
+    place-items: center;
+}
+
+.way-8, .way-9, .way-10 {
+    display: grid;
+}
+
+.way-8 > .inner {
+    align-self: center;
+    justify-self: center;
+}
+
+.way-9 > .inner {
+    place-self: center;
+}
+
+.way-10 > .inner {
+    margin: auto;
+}
